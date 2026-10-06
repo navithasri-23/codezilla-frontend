@@ -9,7 +9,7 @@ class LeaderboardService implements ILeaderboardService {
   async getLeaderboard(filters: LeaderboardFilters): Promise<LeaderboardEntry[]> {
     try {
       // Fetch live data from your Node.js backend
-      const response = await fetch('http://localhost:5000/api/leaderboard');
+      const response = await fetch('https://codezilla-backend.onrender.com/api/leaderboard');
       if (!response.ok) throw new Error('Failed to fetch from backend');
       
       let users = await response.json();
